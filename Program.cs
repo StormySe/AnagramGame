@@ -1,75 +1,75 @@
 ﻿using System.Text;
 namespace Anagram
 {
-	public class Anagram
-	{
-		public static void Main(string[] args)
-		{
-			string anagram = args[0];
-			string input = default;
-
-			Compare comparator = new Compare(anagram);
-
+    public class Program
+    {
+        public static void Main(string[] Args)
+        {
+			string GetAnagram = Args[0];
+			Anagram anagram = new Anagram(GetAnagram);
+			
+			Console.WriteLine($"Введите анаграмму для слова {GetAnagram}");
 			while (true)
 			{
-				Console.WriteLine("Введите слово:");
-				input = Console.ReadLine();
-				
-				if (input == "stop!")
+				string attempt = Console.ReadLine();
+				if (attempt == "stop!")
 					break;
 
-				if (comparator.Is_anagram(input))
-				{
-					Console.WriteLine("Да!!! Это - анаграмма!");
-				}
+				anagram.TryAnagram = attempt;
+				if (anagram.Compare())
+					Console.WriteLine("Да! Это анаграмма!");
 				else
-				{
-					Console.WriteLine("Нет! Это - не анаграмма!");
-				}
+					Console.WriteLine("Нет! Это не анаграмма");
 			}
-			
-		}
-	}
+        }
+    }
 
-	class Compare
+	public class Anagram
 	{
 		private string anagram;
-		
-		public Compare(string anagram)
+		private string try_anagram;
+
+		public Anagram(string anagram)
 		{
-			anagram = sort(anagram);
-			this.anagram = anagram;
+			this.anagram = Sort(anagram);
 		}
 
-		public bool Is_anagram(string input)
+		public string TryAnagram
 		{
-			string result = sort(input);
-			bool ret = anagram.Contains(result) ? true : false;
-			return ret;
-		}
-
-		private string sort(string input)
-		{
-			//selection sort
-			int n = input.Length;
-			StringBuilder inpt = new StringBuilder(input);
-
-			for(int i = 0; i < n - 1; i++)
+			set 
 			{
-				int min_index = i;
-				for(int j = i + 1; j < n; j++)
-				{
-					if(inpt[j] < inpt[min_index])
-						min_index = j;
-				}
-
-				char temp = inpt[min_index];
-				inpt[min_index] = inpt[i];
-				inpt[i] = temp;
+				try_anagram = value;
 			}
-			input = inpt.ToString();
-			return input;
+		}
+
+		public bool Compare()
+		{
+			if (Equals(anagram, Sort(try_anagram)))
+				return true;
+			else
+				return false;
+			
+		}
+
+		private string Sort(string param_str)
+		{
+			//selection sort algorithm
+			StringBuilder str = new StringBuilder(param_str); //strings are immutable, so I need to use StringBuilder here
+			int size = str.Length;
+			for (int i = 0; i < size - 1; i++)
+			{
+				int min = i;
+				for (int j = i + 1; j < size; j++)
+				{
+					if (str[j] < str[min])
+						min = j;
+				}
+				
+				char temp = str[min];
+				str[min] = str[i];
+				str[i] = temp;
+			}
+			return str.ToString();
 		}
 	}
 }
-
