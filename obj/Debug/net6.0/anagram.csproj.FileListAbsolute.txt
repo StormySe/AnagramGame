@@ -1,0 +1,15 @@
+/home/stormtrooper/.dotnet/anagram/bin/Debug/net6.0/anagram
+/home/stormtrooper/.dotnet/anagram/bin/Debug/net6.0/anagram.deps.json
+/home/stormtrooper/.dotnet/anagram/bin/Debug/net6.0/anagram.runtimeconfig.json
+/home/stormtrooper/.dotnet/anagram/bin/Debug/net6.0/anagram.dll
+/home/stormtrooper/.dotnet/anagram/bin/Debug/net6.0/anagram.pdb
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.csproj.AssemblyReference.cache
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.GeneratedMSBuildEditorConfig.editorconfig
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.AssemblyInfoInputs.cache
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.AssemblyInfo.cs
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.csproj.CoreCompileInputs.cache
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.dll
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/refint/anagram.dll
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.pdb
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/anagram.genruntimeconfig.cache
+/home/stormtrooper/.dotnet/anagram/obj/Debug/net6.0/ref/anagram.dll
